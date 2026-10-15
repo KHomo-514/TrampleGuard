@@ -1,0 +1,31 @@
+# NeoForge 1.21.1 mod 描述文件
+#
+# 注意：本文件会被 Gradle 的 processResources 用 Groovy 模板引擎处理，
+# "美元符号 + 花括号"的组合会被当成表达式求值，注释里也不能写那个组合的示例，
+# 否则构建会报 "Failed to parse template script"。详见 README 第八节 Q5。
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="${mod_authors}"
+description='''${mod_description}'''
+logoFile="icon.png"
+
+# ===== 依赖声明 =====
+[[dependencies.${mod_id}]]
+modId="neoforge"
+type="required"
+versionRange="${neo_version_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="minecraft"
+type="required"
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"

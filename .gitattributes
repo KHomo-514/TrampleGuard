@@ -1,0 +1,21 @@
+# 统一换行符。
+#
+# 没有这个文件的话，Windows 上提交的源码会带上 CRLF；Linux / macOS 用户 clone 之后
+# 执行 ./gradlew 会报 "bad interpreter: /bin/sh^M: no such file or directory"。
+#
+# 规则：默认全部用 LF；只有 Windows 专用的批处理脚本用 CRLF。
+
+* text=auto eol=lf
+
+gradlew      text eol=lf
+gradlew.bat  text eol=crlf
+*.bat        text eol=crlf
+*.cmd        text eol=crlf
+
+# 二进制文件不做任何换行符转换
+*.jar   binary
+*.png   binary
+*.gif   binary
+*.jpg   binary
+*.zip   binary
+*.nbt   binary

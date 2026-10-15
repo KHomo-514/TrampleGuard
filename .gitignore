@@ -1,0 +1,31 @@
+# ===== Gradle =====
+.gradle/
+build/
+out/
+repo/
+
+# ===== IDEA =====
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# ===== 运行目录（游戏存档、日志、配置都在这里）=====
+run/
+runs/
+logs/
+
+# ===== 构建产物 =====
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# ===== Eclipse / VSCode =====
+.eclipse/
+.settings/
+.classpath
+.project
+.vscode/
+
+# ===== OS =====
+Thumbs.db
+.DS_Store

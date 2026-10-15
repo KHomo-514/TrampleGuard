@@ -1,0 +1,16 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        gradlePluginPortal()
+        maven { url = 'https://maven.neoforged.net/releases' }
+    }
+}
+
+// 让 Gradle 能在本机缺少 JDK 21 时自动下载一个（需要访问 api.foojay.io）。
+// 如果你的网络访问不了 foojay，把下面这段 plugins {} 整个删掉，
+// 然后在 IDEA 里手动把 Project SDK 和 Gradle JVM 都设成已安装的 JDK 21。
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
+}
+
+rootProject.name = 'trampleguard'
